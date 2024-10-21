@@ -1,7 +1,7 @@
-- Div (at least 2)-
-- Span (at least 2)-
-- Audio (at least 1)-
-- Video (at least 1)-
-- Iframe (at least 1)-
-- Class (at least 2)-
-- Escape character (at least 1)-
+- Div (at least 2)- I Used "tshirt" class for individual t-shirt cards and "tshirt-section" to create a grid layout.
+- Span (at least 2)- I highlighted prices within t-shirt descriptions using the "price" class.
+- Audio (at least 1)- I added background music at the bottom of the page to enhance user experience.
+- Video (at least 1)- I was not able to find a video that I could use for this and thus did not place it.
+- Iframe (at least 1)-I used this to link to my other store. I would change this later but serves for now.
+- Class (at least 2)- I used "tshirt" for consistent t-shirt card styling and "tshirt-section" for overall layout.
+- Escape character (at least 1)- I used &copy; to display the copyright symbol in the footer.
