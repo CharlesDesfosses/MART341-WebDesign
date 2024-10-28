@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    body {background-color: #07a2fc;
+        font-family: Arial, sans-serif;}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+</head>
+<body>
+    <nav>
+        <a style="float: right; padding: 10px" href="index.html">HOME</a>
+        <a style="float: right; padding: 10px" href="product.html">ACTIVITIES</a>
+    </nav>
+    <h1>Welcome to the Products Page</h1>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Colors</th>
+            <th>Sizes</th>
+        </tr>
+        <tr>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Colors</td>
+            <td>Sizes</td>
+        </tr>
+        <tr>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Colors</td>
+            <td>Sizes</td>
+        </tr>
+    </table>
+    <form id="designForm" class="suggestionForm" action="mailto:Grassroots406@Gmail.com" method="post" enctype="text/plain">
+        <h2>Suggest a design</h2>
+        
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">E-Mail Address:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="Design">Suggested Design:</label>
+        <input type="text" id="Design" name="Design" required><br><br>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+        
+        <input type="submit" value="Submit Suggestion">
+    </form>
+</body>
+</html>

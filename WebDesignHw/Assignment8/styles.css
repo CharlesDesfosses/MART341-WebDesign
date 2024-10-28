@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #9beb34;
+    color: #9fbdf5;
+    padding: 1rem;
+}
+
+nav a {
+    color: #aaf39c;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.tshirt-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tshirt {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tshirt img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background: #85a1d3;
+    color: #9ffa54;
+    text-align: center;
+    padding: 1rem;
+}
+
+#background-music {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+  }
