@@ -1,0 +1,141 @@
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #9beb34;
+    color: #9fbdf5;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+nav a {
+    color: #aaf39c;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Product Grid Styles */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.product-category {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.product-category:hover {
+    transform: translateY(-5px);
+}
+
+.product-category.coming-soon {
+    background: #f5f5f5;
+    opacity: 0.7;
+}
+
+/* T-shirt Page Styles */
+.tshirt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.tshirt {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tshirt:hover {
+    transform: translateY(-5px);
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Testimonials */
+#testimonials {
+    background: #f9f9f9;
+    padding: 2rem;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Etsy Section */
+#etsy-shop {
+    text-align: center;
+    padding: 2rem;
+    background: #eee;
+}
+
+.etsy-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #9beb34;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.etsy-button:hover {
+    background: #7bc821;
+}
+
+/* Footer */
+footer {
+    background: #85a1d3;
+    color: #9ffa54;
+    text-align: center;
+    padding: 1rem;
+}
+
+footer a {
+    color: #9ffa54;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .product-grid,
+    .tshirt-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+}
