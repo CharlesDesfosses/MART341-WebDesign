@@ -1,64 +1,103 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+/* Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #6db0eed0; /* Light blue background */
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #e6f3ff;
+    color: #333;
+}
+
+/* Header and Navigation */
 header {
-    background: #9beb34;
-    color: #9fbdf5;
-    padding: 1rem;
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    padding: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 0 1rem;
+    gap: 2rem;
 }
 
 nav a {
-    color: #aaf39c;
+    color: white;
     text-decoration: none;
-    padding: 0.5rem;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 /* Index Page Styles */
 #welcome {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 4rem 2rem;
     max-width: 800px;
     margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 3rem;
 }
 
 #welcome h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1.5rem;
-    color: #333;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 #welcome p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     line-height: 1.8;
+    color: #666;
+    margin-bottom: 2rem;
 }
 
 blockquote {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 2rem;
-    color: #333;
+    font-size: 1.8rem;
+    padding: 3rem 2rem;
+    color: #2c3e50;
     font-style: italic;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 5px solid #9beb34;
+    border-radius: 0 15px 15px 0;
 }
 
 /* Product Grid Styles */
+#products-header {
+    text-align: center;
+    padding: 3rem 0;
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    color: white;
+    margin-bottom: 3rem;
+}
+
+#products-header h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -69,54 +108,59 @@ blockquote {
 }
 
 .product-category {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
     background: white;
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .product-category:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .product-category img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
 
 .product-category h2 {
-    color: #333;
+    font-size: 1.8rem;
+    color: #2c3e50;
     margin-bottom: 1rem;
 }
 
 .product-category.coming-soon {
-    background: #f5f5f5;
-    opacity: 0.7;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    opacity: 0.8;
 }
 
-/* Hero Section Styles */
+/* T-shirt Page Styles */
 #hero {
     width: 100%;
-    height: 50px;
+    height: 400px;
     overflow: hidden;
     position: relative;
+    margin-bottom: 3rem;
 }
 
 .hero-image {
     width: 100%;
-    height: 50%;
+    height: 100%;
     object-fit: cover;
     object-position: center 40%;
 }
 
-/* T-shirt Grid Styles */
 .tshirt-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     padding: 2rem;
     max-width: 1200px;
@@ -124,116 +168,115 @@ blockquote {
 }
 
 .tshirt {
-    background: rgb(147, 154, 216);
-    border: 1px solid #ddd;
-    padding: 1rem;
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
     text-align: center;
-    transition: transform 0.3s ease;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .tshirt:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
 .tshirt img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
     margin-bottom: 1rem;
 }
 
 .tshirt h3 {
-    color: #333;
+    font-size: 1.5rem;
+    color: #2c3e50;
     margin: 1rem 0;
 }
 
 .price {
+    font-size: 1.4rem;
     color: #2c3e50;
     font-weight: bold;
-    font-size: 1.2rem;
+    display: block;
+    margin-top: 1rem;
 }
 
-/* Products Header Styles */
-#products-header {
-    text-align: center;
-    padding: 2rem;
-    background: #9beb34;
-    color: white;
-    margin-bottom: 2rem;
-}
-
-/* Etsy Section Styles */
+/* Etsy Section */
 #etsy-shop {
     text-align: center;
-    padding: 2rem;
-    background: #f8f9fa;
-    margin: 2rem 0;
+    padding: 4rem 2rem;
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    margin: 3rem 0;
 }
 
 .etsy-button {
     display: inline-block;
-    padding: 1rem 2rem;
-    background: #9beb34;
+    padding: 1rem 2.5rem;
+    background: linear-gradient(to right, #9beb34, #7bc821);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-    margin-top: 1rem;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .etsy-button:hover {
-    background: #7bc821;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
-    background: #85a1d3;
-    color: #9ffa54;
+    background: linear-gradient(to right, #85a1d3, #6b8ab8);
+    color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 2rem;
+    margin-top: 3rem;
 }
 
 footer a {
-    color: #9ffa54;
+    color: white;
     text-decoration: none;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    text-decoration: underline;
+    color: #9beb34;
 }
 
 .social {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .contact {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .product-grid,
-    .tshirt-grid {
+    .product-grid {
         grid-template-columns: 1fr;
     }
     
     nav {
         flex-direction: column;
-        text-align: center;
+        gap: 1rem;
     }
     
     #welcome h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     #welcome p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
     
     blockquote {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        padding: 2rem 1rem;
     }
 }
