@@ -1,8 +1,10 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #e6f3ff; /* Light blue background */
 }
 
 header {
@@ -29,12 +31,41 @@ nav a:hover {
     color: #ffffff;
 }
 
+/* Index Page Styles */
+#welcome {
+    text-align: center;
+    padding: 3rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#welcome h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+#welcome p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+blockquote {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: #333;
+    font-style: italic;
+}
+
 /* Product Grid Styles */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* Forces 3 columns */
     gap: 2rem;
     padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .product-category {
@@ -43,10 +74,23 @@ nav a:hover {
     text-align: center;
     background: white;
     transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .product-category:hover {
     transform: translateY(-5px);
+}
+
+.product-category img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-category h2 {
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .product-category.coming-soon {
@@ -54,28 +98,10 @@ nav a:hover {
     opacity: 0.7;
 }
 
-/* T-shirt Page Styles */
-.tshirt-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.tshirt {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.tshirt:hover {
-    transform: translateY(-5px);
-}
-
+/* Hero Section Styles */
 #hero {
     width: 100%;
-    height: 100px;
+    height: 300px;
     overflow: hidden;
     position: relative;
 }
@@ -87,24 +113,62 @@ nav a:hover {
     object-position: center 40%;
 }
 
-/* Testimonials */
-#testimonials {
-    background: #f9f9f9;
+/* T-shirt Grid Styles */
+.tshirt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
     padding: 2rem;
-    text-align: center;
-}
-
-.testimonial {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
 }
 
-/* Etsy Section */
+.tshirt {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tshirt:hover {
+    transform: translateY(-5px);
+}
+
+.tshirt img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.tshirt h3 {
+    color: #333;
+    margin: 1rem 0;
+}
+
+.price {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Products Header Styles */
+#products-header {
+    text-align: center;
+    padding: 2rem;
+    background: #9beb34;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+/* Etsy Section Styles */
 #etsy-shop {
     text-align: center;
     padding: 2rem;
-    background: #eee;
+    background: #f8f9fa;
+    margin: 2rem 0;
 }
 
 .etsy-button {
@@ -115,23 +179,38 @@ nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
+    margin-top: 1rem;
 }
 
 .etsy-button:hover {
     background: #7bc821;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
     background: #85a1d3;
     color: #9ffa54;
     text-align: center;
     padding: 1rem;
+    margin-top: 2rem;
 }
 
 footer a {
     color: #9ffa54;
     text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.social {
+    margin-top: 1rem;
+}
+
+.contact {
+    margin: 1rem 0;
 }
 
 /* Media Queries */
@@ -144,5 +223,17 @@ footer a {
     nav {
         flex-direction: column;
         text-align: center;
+    }
+    
+    #welcome h1 {
+        font-size: 2rem;
+    }
+    
+    #welcome p {
+        font-size: 1.1rem;
+    }
+    
+    blockquote {
+        font-size: 1.2rem;
     }
 }
