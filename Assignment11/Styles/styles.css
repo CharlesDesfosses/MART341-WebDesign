@@ -60,8 +60,64 @@
     font-style: italic;
 }
 
-/* Sour Gummy Classes */
+/* Sour Gummy Class */
 .sour-gummy-heading {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Sour Gummy Font Classes */
+.sour-gummy-thin {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-extralight {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-light {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-regular {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-medium {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-semibold {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-bold {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -69,6 +125,73 @@
     font-variation-settings: "wdth" 100;
 }
 
+.sour-gummy-extrabold {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-black {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Sour Gummy Italic Classes */
+.sour-gummy-thin-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-light-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-regular-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-medium-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-bold-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+/* Special heading class specifically for your h1 */
+.sour-gummy-heading {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 /* Reset default styles */
 * {
     margin: 0;
