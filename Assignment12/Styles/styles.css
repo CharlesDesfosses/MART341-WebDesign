@@ -266,6 +266,9 @@ header nav a:hover {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .product-category img {
@@ -275,21 +278,32 @@ header nav a:hover {
     border-radius: 8px;
 }
 
-/* Coming Soon styles */
+.product-category h2 {
+    margin-top: 30px;
+}
+
+.product-category p {
+    margin-top: 10px;
+}
+
 .coming-soon {
     position: relative;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .coming-soon::after {
     content: "Coming Soon!";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(155, 235, 52, 0.9);
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 10px 20px;
-    border-radius: 5px;
+    background-color: rgba(155, 235, 52, 0.9);
     color: white;
+    border-radius: 15px 15px 0 0;
 }
 
 /* Welcome section styles */
