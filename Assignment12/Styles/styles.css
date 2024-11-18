@@ -216,7 +216,7 @@ header {
     position: relative;
 }
 
-/* Navigation styles - consolidated */
+/* Navigation styles */
 header nav {
     display: flex;
     justify-content: center;
@@ -249,49 +249,49 @@ header nav a:hover {
     height: 40px;
 }
 
-/* Product Grid styles */
+/* Product Grid styles - UPDATED */
 .product-grid {
-    max-width: 800px;
-    margin: 40px auto;
+    max-width: 1200px;
+    margin: 20px auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 0 20px;
 }
 
 .product-category {
     background-color: white;
     border-radius: 15px;
-    padding: 40px 20px;
+    padding: 30px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
+    min-height: 250px;
 }
 
 .product-category img {
     max-width: 100%;
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
 }
 
 .product-category h2 {
-    margin-top: 30px;
+    margin-top: 25px;
+    font-size: 1.5em;
+    color: #2c3e50;
 }
 
 .product-category p {
-    margin-top: 10px;
+    margin-top: 8px;
+    color: #666;
 }
 
 .coming-soon {
     position: relative;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .coming-soon::after {
@@ -300,10 +300,12 @@ header nav a:hover {
     top: 0;
     left: 0;
     right: 0;
-    padding: 10px 20px;
-    background-color: rgba(155, 235, 52, 0.9);
+    padding: 12px 20px;
+    background-color: rgba(155, 235, 52, 0.95);
     color: white;
     border-radius: 15px 15px 0 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 /* Welcome section styles */
@@ -388,6 +390,10 @@ footer a:hover {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     header nav {
         flex-direction: column;
         gap: 15px;
@@ -411,5 +417,11 @@ footer a:hover {
     blockquote {
         font-size: 1.2em;
         padding: 15px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
     }
 }
