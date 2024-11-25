@@ -1,5 +1,3 @@
-/* Font Classes */
-/* Poppins Font Classes */
 .poppins-thin {
     font-family: "Poppins", sans-serif;
     font-weight: 100;
@@ -60,7 +58,6 @@
     font-style: italic;
 }
 
-/* Sour Gummy Font Classes */
 .sour-gummy-heading {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
@@ -68,15 +65,134 @@
     font-style: normal;
 }
 
+.sour-gummy-thin {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
 
-/* Reset default styles */
+.sour-gummy-extralight {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-light {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-regular {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-medium {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-semibold {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-bold {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-extrabold {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-black {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-thin-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-light-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-regular-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-medium-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-bold-italic {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+.sour-gummy-heading {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base styles */
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #e6f3ff;
@@ -84,7 +200,6 @@ body {
     color: #333;
 }
 
-/* Header styles */
 header {
     background: linear-gradient(to right, #9beb34, #7bc821);
     padding: 20px 0;
@@ -92,7 +207,6 @@ header {
     position: relative;
 }
 
-/* Navigation styles */
 header nav {
     display: flex;
     justify-content: center;
@@ -101,7 +215,6 @@ header nav {
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
-    position: relative;
 }
 
 header nav a {
@@ -110,7 +223,6 @@ header nav a {
     padding: 8px 16px;
     border-radius: 25px;
     transition: all 0.3s ease;
-    font-weight: 500;
 }
 
 header nav a:hover {
@@ -118,12 +230,6 @@ header nav a:hover {
     transform: translateY(-2px);
 }
 
-/* Active navigation link */
-header nav a.active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Logo styles */
 .logo {
     position: absolute;
     right: 20px;
@@ -132,7 +238,6 @@ header nav a.active {
     height: 40px;
 }
 
-/* Product Grid styles */
 .product-grid {
     max-width: 1200px;
     margin: 20px auto;
@@ -191,7 +296,6 @@ header nav a.active {
     letter-spacing: 0.5px;
 }
 
-/* Welcome section styles */
 .welcome-section {
     text-align: center;
     max-width: 800px;
@@ -214,7 +318,6 @@ header nav a.active {
     margin-bottom: 15px;
 }
 
-/* Quote section styles */
 .quote-section {
     text-align: center;
     max-width: 800px;
@@ -232,7 +335,6 @@ blockquote {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer styles */
 footer {
     background: linear-gradient(to right, #85a1d3, #6b8ab8);
     color: white;
@@ -271,138 +373,27 @@ footer a:hover {
     color: #9beb34;
 }
 
-/* T-shirt page specific styles */
-.tshirt-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.tshirt {
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.tshirt img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.tshirt h3 {
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.price {
-    color: #7bc821;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    header nav {
-        flex-direction: column;
-        gap: 12px;
-        padding: 15px 10px;
-    }
-
-    header nav a {
-        font-size: 0.95em;
-        text-align: center;
-        width: 100%;
-    }
-
-    .logo {
-        position: relative;
-        transform: none;
-        margin: 20px auto;
-        display: block;
-    }
-
-    .welcome-section h1 {
-        font-size: 2em;
-    }
-
-    .welcome-section p {
-        font-size: 1.1em;
-    }
-
-    blockquote {
-        font-size: 1.2em;
-        padding: 15px 30px;
-    }
-}
-
-@media (max-width: 480px) {
-    .product-grid {
-        grid-template-columns: 1fr;
-    }
-
-    header nav {
-        gap: 8px;
-    }
-
-    header nav a {
-        font-size: 0.9em;
-        padding: 6px 12px;
-    }
-
-    .welcome-section {
-        padding: 30px 15px;
-    }
-
-    .tshirt-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 380px) {
-    header nav a {
-        font-size: 0.85em;
-        padding: 5px 10px;
-    }
-}
-
-/* Hero section styles */
 .hero-section {
-    max-width: 1200px;
-    margin: 0 auto 40px;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 0 20px;
 }
 
 .hero-image {
     width: 100%;
-    max-height: 400px;
+    max-height: 200px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* T-shirt grid styles */
-.tshirt-grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .tshirt-grid {
+    max-width: 1200px;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-bottom: 40px;
+    padding: 0 20px;
 }
 
 .tshirt-item {
@@ -453,48 +444,40 @@ footer a:hover {
     transform: translateY(-2px);
 }
 
-/* Etsy section styles */
-.etsy-section {
-    text-align: center;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 40px 20px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.etsy-section h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-.etsy-section p {
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.etsy-button {
-    display: inline-block;
-    background: linear-gradient(to right, #9beb34, #7bc821);
-    color: white;
-    text-decoration: none;
-    padding: 12px 30px;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: transform 0.3s ease;
-}
-
-.etsy-button:hover {
-    transform: translateY(-2px);
-}
-
-/* Media Queries */
 @media (max-width: 768px) {
-    .hero-image {
-        max-height: 300px;
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    
+
+    header nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo {
+        position: relative;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+
+    .welcome-section p {
+        font-size: 1.1em;
+    }
+
+    blockquote {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+
+    .hero-image {
+        max-height: 150px;
+    }
+
     .tshirt-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -502,14 +485,23 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    .hero-image {
-        max-height: 200px;
+    .product-grid {
+        grid-template-columns: 1fr;
     }
-    
+
+    header nav a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .hero-image {
+        max-height: 120px;
+    }
+
     .tshirt-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .tshirt-item {
         padding: 15px;
     }
