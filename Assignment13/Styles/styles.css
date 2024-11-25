@@ -60,7 +60,7 @@
     font-style: italic;
 }
 
-/* Sour Gummy Class */
+/* Sour Gummy Font Classes */
 .sour-gummy-heading {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
@@ -68,130 +68,6 @@
     font-style: normal;
 }
 
-/* Sour Gummy Font Classes */
-.sour-gummy-thin {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-extralight {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 200;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-light {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-regular {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-medium {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-semibold {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-bold {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-extrabold {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-black {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-}
-
-/* Sour Gummy Italic Classes */
-.sour-gummy-thin-italic {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100;
-    font-style: italic;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-light-italic {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: italic;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-regular-italic {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: italic;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-medium-italic {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: italic;
-    font-variation-settings: "wdth" 100;
-}
-
-.sour-gummy-bold-italic {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: italic;
-    font-variation-settings: "wdth" 100;
-}
-
-/* Special heading class specifically for your h1 */
-.sour-gummy-heading {
-    font-family: "Sour Gummy", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
 
 /* Reset default styles */
 * {
@@ -221,10 +97,11 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     padding: 20px 0;
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
 }
 
 header nav a {
@@ -233,11 +110,17 @@ header nav a {
     padding: 8px 16px;
     border-radius: 25px;
     transition: all 0.3s ease;
+    font-weight: 500;
 }
 
 header nav a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
+}
+
+/* Active navigation link */
+header nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Logo styles */
@@ -249,7 +132,7 @@ header nav a:hover {
     height: 40px;
 }
 
-/* Product Grid styles - UPDATED */
+/* Product Grid styles */
 .product-grid {
     max-width: 1200px;
     margin: 20px auto;
@@ -388,7 +271,43 @@ footer a:hover {
     color: #9beb34;
 }
 
-/* Media Queries for Responsiveness */
+/* T-shirt page specific styles */
+.tshirt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tshirt {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tshirt img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tshirt h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #7bc821;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -396,7 +315,14 @@ footer a:hover {
 
     header nav {
         flex-direction: column;
-        gap: 15px;
+        gap: 12px;
+        padding: 15px 10px;
+    }
+
+    header nav a {
+        font-size: 0.95em;
+        text-align: center;
+        width: 100%;
     }
 
     .logo {
@@ -423,5 +349,29 @@ footer a:hover {
 @media (max-width: 480px) {
     .product-grid {
         grid-template-columns: 1fr;
+    }
+
+    header nav {
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+
+    .welcome-section {
+        padding: 30px 15px;
+    }
+
+    .tshirt-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 380px) {
+    header nav a {
+        font-size: 0.85em;
+        padding: 5px 10px;
     }
 }
