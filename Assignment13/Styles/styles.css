@@ -373,20 +373,6 @@ footer a:hover {
     color: #9beb34;
 }
 
-.hero-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
-.hero-image {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
 .tshirt-grid {
     max-width: 1200px;
     margin: 20px auto;
@@ -474,10 +460,6 @@ footer a:hover {
         padding: 15px 30px;
     }
 
-    .hero-image {
-        max-height: 150px;
-    }
-
     .tshirt-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
@@ -492,10 +474,6 @@ footer a:hover {
     header nav a {
         font-size: 0.9em;
         padding: 6px 12px;
-    }
-
-    .hero-image {
-        max-height: 120px;
     }
 
     .tshirt-grid {
