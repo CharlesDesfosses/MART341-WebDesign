@@ -375,3 +375,142 @@ footer a:hover {
         padding: 5px 10px;
     }
 }
+
+/* Hero section styles */
+.hero-section {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* T-shirt grid styles */
+.tshirt-grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.tshirt-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.tshirt-item {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tshirt-item:hover {
+    transform: translateY(-5px);
+}
+
+.tshirt-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.tshirt-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.price {
+    color: #7bc821;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.shop-button {
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.shop-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Etsy section styles */
+.etsy-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.etsy-section h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.etsy-section p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.etsy-button {
+    display: inline-block;
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.etsy-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-image {
+        max-height: 300px;
+    }
+    
+    .tshirt-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        max-height: 200px;
+    }
+    
+    .tshirt-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tshirt-item {
+        padding: 15px;
+    }
+}
