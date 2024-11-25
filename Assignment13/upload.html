@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Design - Dripshop</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+    <style>
+        /* Additional styles specific to the upload page */
+        .upload-form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e6f3ff;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .file-upload {
+            border: 2px dashed #9beb34;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .submit-button {
+            background: linear-gradient(to right, #9beb34, #7bc821);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .submit-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .guidelines {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .guidelines h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .guidelines ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .upload-form {
+                margin: 20px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="poppins-regular">
+    <header>
+        <nav class="nav-container">
+            <a href="./index.html">Home</a>
+            <a href="./products.html">Products</a>
+            <a href="./Shirts.html">T-Shirts</a>
+            <a href="./upload.html">Upload Design</a>
+            <img src="./Images/Logo.png" alt="Dripshop Logo" class="logo">
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h1 class="sour-gummy-heading">Upload Your Design</h1>
+            <p class="poppins-light">Create your own custom product with your unique design!</p>
+        </section>
+
+        <section class="upload-form">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="product-type">Select Product Type</label>
+                    <select id="product-type" name="product-type" required>
+                        <option value="">Choose a product...</option>
+                        <option value="tshirt">T-Shirt</option>
+                        <option value="hoodie">Hoodie</option>
+                        <option value="mug">Coffee Mug</option>
+                        <option value="sticker">Sticker</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="design-file">Upload Your Design</label>
+                    <div class="file-upload">
+                        <input type="file" id="design-file" name="design-file" accept=".png,.jpg,.jpeg,.ai,.psd,.svg" required>
+                        <p class="poppins-light">Accepted formats: PNG, JPG, AI, PSD, SVG</p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="design-description">Design Description</label>
+                    <textarea id="design-description" name="design-description" placeholder="Tell us about your design and any specific requirements..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <button type="submit" class="submit-button">Submit Design</button>
+            </form>
+
+            <div class="guidelines">
+                <h3>Design Guidelines</h3>
+                <ul>
+                    <li>Minimum resolution: 300 DPI</li>
+                    <li>Maximum file size: 25MB</li>
+                    <li>Preferred dimensions: 4000x4000 pixels</li>
+                    <li>Please ensure you have the rights to use all elements in your design</li>
+                    <li>Allow 1-2 business days for design review</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p class="copyright poppins-regular">&copy; 2024 Dripshop. All rights reserved.</p>
+            <div class="contact">
+                <p class="poppins-light">Contact: <a href="mailto:info@dripshop.com">info@dripshop.com</a></p>
+            </div>
+            <div class="social">
+                <a href="#" class="poppins-regular">Facebook</a>
+                <a href="#" class="poppins-regular">Instagram</a>
+                <a href="#" class="poppins-regular">X</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
