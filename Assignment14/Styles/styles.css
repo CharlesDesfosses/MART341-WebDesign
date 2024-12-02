@@ -83,36 +83,55 @@ body {
     color: #333;
 }
 
+/* Banner and Logo Styles */
+.banner {
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-logo {
+    height: 60px;
+    width: auto;
+}
+
 /* Navigation */
 .navbar {
-    background: linear-gradient(to right, #9beb34, #7bc821);
-    padding: 20px 0;
-    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar .nav-link {
-    color: white !important;
-    padding: 8px 16px !important;
+    font-size: 1.1em;
+    padding: 8px 20px !important;
+    margin: 0 5px;
+    color: #333 !important;
+    font-weight: 500;
     border-radius: 25px;
     transition: all 0.3s ease;
 }
 
 .navbar .nav-link:hover, 
 .navbar .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(155, 235, 52, 0.1);
+    color: #7bc821 !important;
     transform: translateY(-2px);
 }
 
 .navbar-toggler {
-    border-color: white;
+    border-color: #7bc821;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
-}
-
-.navbar-brand.logo {
-    height: 40px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(123, 200, 33, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Welcome Section */
@@ -121,20 +140,35 @@ body {
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 40px 20px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .welcome-section h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     color: #2c3e50;
     margin-bottom: 20px;
+    text-transform: uppercase;
 }
 
 .welcome-section p {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+}
+
+/* Quote Section */
+.quote-section {
+    margin: 40px auto;
+}
+
+blockquote {
+    font-size: 1.4em;
+    color: #2c3e50;
+    padding: 20px 40px;
+    background-color: white;
+    border-left: 5px solid #9beb34;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Product Grid Styles */
@@ -150,7 +184,6 @@ body {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    margin-bottom: 30px;
     height: 100%;
 }
 
@@ -307,6 +340,48 @@ body {
     gap: 2px;
 }
 
+/* Upload Form Styles */
+.upload-form-section .card {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.upload-form-section .card-body {
+    padding: 2rem;
+}
+
+.file-upload {
+    border: 2px dashed #9beb34;
+    transition: border-color 0.3s ease;
+}
+
+.file-upload:hover {
+    border-color: #7bc821;
+}
+
+.guidelines {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.guidelines h3 {
+    color: #2c3e50;
+}
+
+.guidelines ul li {
+    color: #666;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #9beb34;
+    box-shadow: 0 0 0 0.25rem rgba(155, 235, 52, 0.25);
+}
+
 /* Footer */
 footer {
     background: linear-gradient(to right, #85a1d3, #6b8ab8);
@@ -360,6 +435,10 @@ footer a:hover {
     .navbar-nav {
         text-align: center;
     }
+
+    .small-logo {
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -369,5 +448,13 @@ footer a:hover {
 
     .logo {
         height: 30px;
+    }
+
+    .welcome-section {
+        padding: 20px;
+    }
+
+    .welcome-section h1 {
+        font-size: 1.8em;
     }
 }
