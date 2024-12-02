@@ -1,0 +1,426 @@
+/* Font Classes */
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.sour-gummy-heading {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e6f3ff;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    padding: 20px 0;
+    margin-bottom: 40px;
+}
+
+.navbar .nav-link {
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-brand.logo {
+    height: 40px;
+}
+
+/* Welcome Section */
+.welcome-section {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    margin-top: 40px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Quote Section */
+.quote-section {
+    margin: 40px auto;
+}
+
+blockquote {
+    font-size: 1.4em;
+    color: #2c3e50;
+    padding: 20px 40px;
+    background-color: white;
+    border-left: 5px solid #9beb34;
+    border-radius: 0 15px 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Grid Styles */
+.product-category.card {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-category.card:hover {
+    transform: translateY(-5px);
+}
+
+.product-category .card-title {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+}
+
+.product-category .card-text {
+    color: #666;
+}
+
+.product-category.coming-soon {
+    position: relative;
+}
+
+.product-category.coming-soon::after {
+    content: "Coming Soon!";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 12px 20px;
+    background-color: rgba(155, 235, 52, 0.95);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.product-category img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product-category a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.product-category img:hover {
+    transform: scale(1.05);
+}
+
+/* T-Shirt Grid Styles */
+.tshirt-item.card {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.tshirt-item.card:hover {
+    transform: translateY(-5px);
+}
+
+.tshirt-item .card-img-top {
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1rem 0;
+}
+
+.tshirt-item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.tshirt-item .price {
+    color: #7bc821;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.shop-button {
+    background: linear-gradient(to right, #9beb34, #7bc821);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.shop-button:hover {
+    transform: translateY(-2px);
+    color: white;
+}
+
+.etsy-section {
+    background-color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Upload Form Styles */
+.upload-form-section .card {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.upload-form-section .card-body {
+    padding: 2rem;
+}
+
+.file-upload {
+    border: 2px dashed #9beb34;
+    transition: border-color 0.3s ease;
+}
+
+.file-upload:hover {
+    border-color: #7bc821;
+}
+
+.guidelines {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.guidelines h3 {
+    color: #2c3e50;
+}
+
+.guidelines ul li {
+    color: #666;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #9beb34;
+    box-shadow: 0 0 0 0.25rem rgba(155, 235, 52, 0.25);
+}
+
+/* Canvas Customizer Styles */
+#tshirtCanvas {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 100%;
+    height: auto;
+}
+
+.color-options {
+    display: flex;
+    gap: 10px;
+}
+
+.color-btn {
+    width: 35px;
+    height: 35px;
+    border: 3px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-btn:hover {
+    transform: scale(1.1);
+}
+
+.color-btn.active {
+    border-color: #9beb34;
+    transform: scale(1.1);
+}
+
+.template-options button {
+    white-space: nowrap;
+}
+
+.form-control-color {
+    width: 100%;
+    height: 38px;
+}
+
+.controls {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-group {
+    gap: 2px;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #85a1d3, #6b8ab8);
+    color: white;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.copyright {
+    margin-bottom: 15px;
+}
+
+.contact {
+    margin-bottom: 15px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #9beb34;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .welcome-section h1 {
+        font-size: 2em;
+    }
+
+    .welcome-section p {
+        font-size: 1.1em;
+    }
+
+    blockquote {
+        font-size: 1.2em;
+        padding: 15px 30px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .logo {
+        height: 30px;
+    }
+}

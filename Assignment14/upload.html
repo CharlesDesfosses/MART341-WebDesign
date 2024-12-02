@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Design - Dripshop</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+</head>
+<body class="poppins-regular">
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Shirts.html">T-Shirts</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./upload.html">Upload Design</a></li>
+                    </ul>
+                </div>
+                <img src="./Images/Logo.png" alt="Dripshop Logo" class="logo navbar-brand">
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="welcome-section row justify-content-center">
+            <div class="col-12">
+                <h1 class="sour-gummy-heading text-center">Upload Your Design</h1>
+                <p class="poppins-light text-center">Create your own custom product with your unique design!</p>
+            </div>
+        </section>
+
+        <!-- Customizer Section -->
+        <section class="customizer-section row justify-content-center mb-5">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <canvas id="tshirtCanvas" width="600" height="400" class="img-fluid"></canvas>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="controls">
+                                    <!-- Color Selection -->
+                                    <div class="mb-3">
+                                        <label class="form-label">T-Shirt Color</label>
+                                        <div class="color-options d-flex gap-2 flex-wrap">
+                                            <button class="color-btn active" data-color="#ffffff" style="background-color: #ffffff;"></button>
+                                            <button class="color-btn" data-color="#000000" style="background-color: #000000;"></button>
+                                            <button class="color-btn" data-color="#ff0000" style="background-color: #ff0000;"></button>
+                                            <button class="color-btn" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                                            <button class="color-btn" data-color="#00ff00" style="background-color: #00ff00;"></button>
+                                            <button class="color-btn" data-color="#ffff00" style="background-color: #ffff00;"></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Text Controls -->
+                                    <div class="mb-3">
+                                        <label for="customText" class="form-label">Add Text</label>
+                                        <input type="text" id="customText" class="form-control mb-2">
+                                        <div class="row g-2 mb-2">
+                                            <div class="col">
+                                                <select id="fontFamily" class="form-select">
+                                                    <option value="Arial">Arial</option>
+                                                    <option value="Helvetica">Helvetica</option>
+                                                    <option value="Times New Roman">Times New Roman</option>
+                                                    <option value="Poppins">Poppins</option>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <input type="color" id="textColor" class="form-control form-control-color" value="#000000">
+                                            </div>
+                                        </div>
+                                        <div class="row g-2 mb-2">
+                                            <div class="col">
+                                                <input type="number" id="fontSize" class="form-control" value="20" min="10" max="100">
+                                            </div>
+                                            <div class="col">
+                                                <select id="textAlign" class="form-select">
+                                                    <option value="left">Left</option>
+                                                    <option value="center">Center</option>
+                                                    <option value="right">Right</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <button id="addTextBtn" class="btn shop-button btn-sm">Add Text</button>
+                                    </div>
+
+                                    <!-- Template Selection -->
+                                    <div class="mb-3">
+                                        <label class="form-label">Quick Templates</label>
+                                        <div class="template-options d-flex gap-2 flex-wrap">
+                                            <button class="btn btn-outline-secondary btn-sm" data-template="birthday">Birthday</button>
+                                            <button class="btn btn-outline-secondary btn-sm" data-template="custom">Custom Design</button>
+                                            <button class="btn btn-outline-secondary btn-sm" data-template="funny">Funny Quote</button>
+                                        </div>
+                                    </div>
+
+                                    <!-- Image Upload -->
+                                    <div class="mb-3">
+                                        <label for="imageUpload" class="form-label">Upload Image</label>
+                                        <input type="file" id="imageUpload" class="form-control" accept="image/*">
+                                        <div class="mt-2">
+                                            <label class="form-label">Image Controls:</label>
+                                            <div class="btn-group w-100">
+                                                <button id="moveForward" class="btn btn-sm btn-outline-secondary">Move Forward</button>
+                                                <button id="moveBackward" class="btn btn-sm btn-outline-secondary">Move Backward</button>
+                                                <button id="deleteSelected" class="btn btn-sm btn-outline-danger">Delete Selected</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Canvas Controls -->
+                                    <div class="d-flex gap-2 mt-3">
+                                        <button id="resetCanvas" class="btn btn-outline-danger">Reset Design</button>
+                                        <button id="downloadDesign" class="btn shop-button">Download Design</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Form Section -->
+        <section class="upload-form-section row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="#" method="POST" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="product-type" class="form-label">Select Product Type</label>
+                                <select id="product-type" name="product-type" class="form-select" required>
+                                    <option value="">Choose a product...</option>
+                                    <option value="tshirt">T-Shirt</option>
+                                    <option value="hoodie">Hoodie</option>
+                                    <option value="mug">Coffee Mug</option>
+                                    <option value="sticker">Sticker</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="design-file" class="form-label">Upload Your Design</label>
+                                <div class="file-upload p-3 border rounded text-center bg-light">
+                                    <input type="file" id="design-file" name="design-file" 
+                                           class="form-control" 
+                                           accept=".png,.jpg,.jpeg,.ai,.psd,.svg" required>
+                                    <p class="poppins-light mt-2 mb-0">Accepted formats: PNG, JPG, AI, PSD, SVG</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="design-description" class="form-label">Design Description</label>
+                                <textarea id="design-description" name="design-description" 
+                                          class="form-control" rows="4"
+                                          placeholder="Tell us about your design and any specific requirements..." 
+                                          required></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+
+                            <div class="text-center">
+                                <button type="submit" class="btn shop-button">Submit Design</button>
+                            </div>
+                        </form>
+
+                        <div class="guidelines mt-4">
+                            <h3 class="h5 mb-3">Design Guidelines</h3>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">✓ Minimum resolution: 300 DPI</li>
+                                <li class="mb-2">✓ Maximum file size: 25MB</li>
+                                <li class="mb-2">✓ Preferred dimensions: 4000x4000 pixels</li>
+                                <li class="mb-2">✓ Please ensure you have the rights to use all elements in your design</li>
+                                <li>✓ Allow 1-2 business days for design review</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-5">
+        <div class="footer-content container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <p class="copyright poppins-regular">&copy; 2024 Dripshop. All rights reserved.</p>
+                    <div class="contact">
+                        <p class="poppins-light">Contact: <a href="mailto:info@dripshop.com">info@dripshop.com</a></p>
+                    </div>
+                    <div class="social">
+                        <a href="#" class="poppins-regular me-3">Facebook</a>
+                        <a href="#" class="poppins-regular me-3">Instagram</a>
+                        <a href="#" class="poppins-regular">X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fabric.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="./js/customizer.js"></script>
+</body>
+</html>
