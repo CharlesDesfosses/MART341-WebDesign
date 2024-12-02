@@ -83,37 +83,23 @@ body {
     color: #333;
 }
 
-/* Banner and Logo Styles */
-.banner {
-    background: linear-gradient(to right, #9beb34, #7bc821);
-    padding: 10px 0;
-    text-align: center;
-}
-
-.logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.small-logo {
-    height: 60px;
-    width: auto;
-}
-
 /* Navigation */
 .navbar {
-    background: rgba(255, 255, 255, 0.1);
+    background: linear-gradient(to right, #9beb34, #7bc821);
     padding: 10px 0;
     margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.nav-logo {
+    height: 40px;
+    width: auto;
 }
 
 .navbar .nav-link {
     font-size: 1.1em;
     padding: 8px 20px !important;
     margin: 0 5px;
-    color: #333 !important;
+    color: white !important;
     font-weight: 500;
     border-radius: 25px;
     transition: all 0.3s ease;
@@ -121,17 +107,16 @@ body {
 
 .navbar .nav-link:hover, 
 .navbar .nav-link.active {
-    background-color: rgba(155, 235, 52, 0.1);
-    color: #7bc821 !important;
+    background-color: rgba(255, 255, 255, 0.2);
     transform: translateY(-2px);
 }
 
 .navbar-toggler {
-    border-color: #7bc821;
+    border-color: white;
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(123, 200, 33, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }
 
 /* Welcome Section */
@@ -288,6 +273,48 @@ blockquote {
     opacity: 0.9;
 }
 
+/* Upload Form Styles */
+.upload-form-section .card {
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.upload-form-section .card-body {
+    padding: 2rem;
+}
+
+.file-upload {
+    border: 2px dashed #9beb34;
+    transition: border-color 0.3s ease;
+}
+
+.file-upload:hover {
+    border-color: #7bc821;
+}
+
+.guidelines {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.guidelines h3 {
+    color: #2c3e50;
+}
+
+.guidelines ul li {
+    color: #666;
+}
+
+.form-control:focus, 
+.form-select:focus {
+    border-color: #9beb34;
+    box-shadow: 0 0 0 0.25rem rgba(155, 235, 52, 0.25);
+}
+
 /* Canvas Customizer Styles */
 #tshirtCanvas {
     border: 1px solid #ddd;
@@ -338,48 +365,6 @@ blockquote {
 
 .btn-group {
     gap: 2px;
-}
-
-/* Upload Form Styles */
-.upload-form-section .card {
-    background-color: white;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-.upload-form-section .card-body {
-    padding: 2rem;
-}
-
-.file-upload {
-    border: 2px dashed #9beb34;
-    transition: border-color 0.3s ease;
-}
-
-.file-upload:hover {
-    border-color: #7bc821;
-}
-
-.guidelines {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-}
-
-.guidelines h3 {
-    color: #2c3e50;
-}
-
-.guidelines ul li {
-    color: #666;
-}
-
-.form-control:focus, 
-.form-select:focus {
-    border-color: #9beb34;
-    box-shadow: 0 0 0 0.25rem rgba(155, 235, 52, 0.25);
 }
 
 /* Footer */
@@ -436,8 +421,8 @@ footer a:hover {
         text-align: center;
     }
 
-    .small-logo {
-        height: 40px;
+    .nav-logo {
+        height: 35px;
     }
 }
 
@@ -446,7 +431,7 @@ footer a:hover {
         text-align: center;
     }
 
-    .logo {
+    .nav-logo {
         height: 30px;
     }
 
