@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore DripShop's collection of custom t-shirts, hoodies, mugs, and more. Find unique designs or create your own custom apparel.">
+    <meta name="keywords" content="custom t-shirts, hoodies, mugs, stickers, custom apparel, merchandise">
+    <title>Products - DripShop</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Images/favicon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+</head>
+<body class="poppins-regular">
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top" aria-label="Main navigation">
+            <div class="container">
+                <a href="index.html" class="navbar-brand" aria-label="DripShop Home">
+                    <img src="./Images/Logo.png" alt="Dripshop Logo" class="nav-logo" width="120" height="40" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="./products.html" aria-current="page">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Shirts.html">T-Shirts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./upload.html">Upload Design</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link position-relative" href="./cart.html" aria-label="Shopping cart">
+                                <i class="bi bi-cart"></i>
+                                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Search Bar -->
+                    <form class="d-flex ms-3" role="search" action="./search.html" method="GET">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search products..." 
+                                   aria-label="Search" name="q" required>
+                            <button class="btn shop-button" type="submit" aria-label="Submit search">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <main id="main-content" class="container">
+        <!-- Breadcrumb -->
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Products</li>
+            </ol>
+        </nav>
+
+        <section class="welcome-section">
+            <h1 class="sour-gummy-heading text-center">Our Products</h1>
+            <p class="poppins-light text-center">Discover our collection of unique designs across various products</p>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section my-4" aria-labelledby="filter-heading">
+            <h2 id="filter-heading" class="visually-hidden">Product Filters</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-3">
+                            <label for="category-filter" class="form-label">Category</label>
+                            <select id="category-filter" class="form-select">
+                                <option value="">All Categories</option>
+                                <option value="tshirts">T-Shirts</option>
+                                <option value="hoodies">Hoodies</option>
+                                <option value="mugs">Mugs</option>
+                                <option value="stickers">Stickers</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="sort-filter" class="form-label">Sort By</label>
+                            <select id="sort-filter" class="form-select">
+                                <option value="newest">Newest First</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="popular">Most Popular</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="availability-filter" class="form-label">Availability</label>
+                            <select id="availability-filter" class="form-select">
+                                <option value="">All Items</option>
+                                <option value="in-stock">In Stock</option>
+                                <option value="coming-soon">Coming Soon</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3 mt-4">
+                            <button id="apply-filters" class="btn shop-button w-100">Apply Filters</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-grid" aria-label="Product grid">
+            <div class="row g-4">
+                <!-- T-shirts -->
+                <div class="col-md-4 col-lg-3">
+                    <div class="product-category card h-100">
+                        <div class="card-badge in-stock">In Stock</div>
+                        <img src="./Images/WeAreNotShirt.jpg" 
+                             alt="Collection of various t-shirt designs" 
+                             class="card-img-top"
+                             loading="lazy"
+                             width="300"
+                             height="300">
+                        <div class="card-body">
+                            <h2 class="h4">T-shirts</h2>
+                            <p class="poppins-light">Browse our unique t-shirt designs</p>
+                            <div class="product-meta">
+                                <div class="rating mb-2">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="rating-count">(127)</span>
+                                </div>
+                                <p class="price-range mb-3">$24.99 - $29.99</p>
+                            </div>
+                            <a href="./Shirts.html" class="btn shop-button w-100">View Collection</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coffee Mugs -->
+                <div class="col-md-4 col-lg-3">
+                    <div class="product-category card h-100">
+                        <div class="card-badge coming-soon">Coming Soon</div>
+                        <img src="./Images/placeholder-mug.jpg" 
+                             alt="Preview of coffee mug designs" 
+                             class="card-img-top"
+                             loading="lazy"
+                             width="300"
+                             height="300">
+                        <div class="card-body">
+                            <h2 class="h4">Coffee Mugs</h2>
+                            <p class="poppins-light">Express yourself with our unique mug designs</p>
+                            <div class="notify-form mt-3">
+                                <label for="notify-email-mugs" class="form-label">Get notified when available:</label>
+                                <div class="input-group">
+                                    <input type="email" class="form-control" id="notify-email-mugs" 
+                                           placeholder="Enter your email">
+                                    <button class="btn shop-button" type="button" onclick="notifyMe('mugs')">
+                                        Notify Me
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More product categories... -->
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section my-5 p-4 bg-light rounded" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title" class="text-center mb-3">Stay Updated</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="newsletterForm" class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" 
+                                   aria-label="Email for newsletter" required>
+                            <button class="btn shop-button" type="submit">Subscribe</button>
+                        </div>
+                        <small class="form-text">Get early access to new products and exclusive offers!</small>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <!-- Footer content (same as index.html) -->
+    </footer>
+
+    <!-- Toast Container for Notifications -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="toastContainer"></div>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="./js/main.js"></script>
+    <script src="./js/products.js"></script>
+    <script src="./js/cart.js"></script>
+</body>
+</html>

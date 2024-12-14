@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DripShop - Your premier destination for unique and customizable t-shirts. Find the perfect design or create your own!">
+    <meta name="keywords" content="t-shirts, custom t-shirts, clothing, fashion, custom design">
+    <title>DripShop - Custom T-Shirts & Apparel</title>
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Images/favicon.png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sour+Gummy&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./Styles/styles.css">
+
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "DripShop",
+        "image": "./Images/Logo.png",
+        "description": "Premium custom t-shirts and apparel",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "US"
+        },
+        "priceRange": "$$"
+    }
+    </script>
+</head>
+<body class="poppins-regular">
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header>
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container">
+                <a href="index.html" class="navbar-brand" aria-label="DripShop Home">
+                    <img src="./Images/Logo.png" alt="Dripshop Logo" class="nav-logo" width="120" height="40" loading="lazy">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="./index.html" aria-current="page">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./Shirts.html">T-Shirts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./upload.html">Upload Design</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-link position-relative" href="./cart.html" aria-label="Shopping cart">
+                                <i class="bi bi-cart"></i>
+                                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Search Bar -->
+                    <form class="d-flex ms-3" role="search" action="./search.html" method="GET">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Search products..." 
+                                   aria-label="Search" name="q" required>
+                            <button class="btn shop-button" type="submit" aria-label="Submit search">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container">
+        <!-- Hero Section -->
+        <section class="hero-section mb-5" aria-labelledby="hero-title">
+            <div class="welcome-section">
+                <h1 id="hero-title" class="sour-gummy-heading text-center">Welcome to the DripShop</h1>
+                <p class="poppins-light text-center mb-2">There is a T-Shirt for Everyone</p>
+                <p class="poppins-light text-center">Look around and find the perfect T-shirt for you!</p>
+                <div class="cta-buttons text-center mt-4">
+                    <a href="./Shirts.html" class="btn shop-button btn-lg me-3">Shop Now</a>
+                    <a href="./upload.html" class="btn btn-outline-secondary btn-lg">Create Custom Design</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products mt-5" aria-labelledby="featured-title">
+            <h2 id="featured-title" class="sour-gummy-heading text-center mb-4">Featured Products</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card product-card h-100">
+                        <img src="./Images/ImJudgingYouShirt.jpg" alt="Sassy T-shirt Design" 
+                             class="card-img-top" loading="lazy" width="300" height="300">
+                        <div class="card-body">
+                            <h3 class="card-title h5">Sassy T-shirt</h3>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <p class="price mb-0">$24.99</p>
+                                <div class="product-rating">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-half text-warning"></i>
+                                    <span class="rating-count">(42)</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <button class="btn shop-button" onclick="addToCart('sassy-tshirt')"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Cart">
+                                    Add to Cart
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm" onclick="addToWishlist('sassy-tshirt')"
+                                        data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist">
+                                    <i class="bi bi-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more featured products here -->
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section my-5 p-4 bg-light rounded" aria-labelledby="newsletter-title">
+            <h2 id="newsletter-title" class="text-center mb-3">Stay Updated</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="newsletterForm" class="newsletter-form" onsubmit="return handleNewsletterSubmit(event)">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" 
+                                   aria-label="Email for newsletter" required>
+                            <button class="btn shop-button" type="submit">Subscribe</button>
+                        </div>
+                        <small class="form-text">We'll never share your email with anyone else.</small>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer mt-5">
+        <div class="footer-content container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title h5">About DripShop</h3>
+                    <p>Creating unique, high-quality custom t-shirts for everyone since 2024.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title h5">Quick Links</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./faq.html">FAQ</a></li>
+                        <li><a href="./shipping.html">Shipping Information</a></li>
+                        <li><a href="./returns.html">Returns Policy</a></li>
+                        <li><a href="./privacy.html">Privacy Policy</a></li>
+                        <li><a href="./terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 class="footer-title h5">Contact Us</h3>
+                    <p>Email: <a href="mailto:info@dripshop.com">info@dripshop.com</a></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook" class="me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram" class="me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="copyright mb-0">&copy; 2024 Dripshop. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent" role="alert">
+        <p>We use cookies to improve your experience. By continuing to browse, you accept our 
+            <a href="./privacy.html">cookie policy</a>.</p>
+        <button onclick="acceptCookies()" class="btn shop-button btn-sm">Accept</button>
+    </div>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="./js/main.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="./js/wishlist.js"></script>
+</body>
+</html>
